@@ -462,7 +462,6 @@ span
         grid-template-columns: 1fr auto auto;
         column-gap: 1rem;
         justify-items: center;
-        
     } 
 
     .navbar_container
