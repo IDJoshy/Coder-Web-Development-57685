@@ -45,9 +45,9 @@ span
 
 /* #endregion */
 
-/* #region NavBar */
+/* #region navbar */
 
-.NavBar_container
+.navbar_container
 {
     height: auto;
     width: 100vw;
@@ -58,7 +58,7 @@ span
     --nav-height: 4.75rem;
 }
 
-.NavBar_container::before
+.navbar_container::before
 {
     position: fixed;
     top: 0;
@@ -73,8 +73,8 @@ span
     background-color: rgba(0, 0, 0, .4)
 }
 
-.NavBar_container
-.NavBar_content
+.navbar_container
+.navbar_content
 {
     display: grid;
     grid-template-areas: "hamburger get";
@@ -83,9 +83,9 @@ span
     justify-items: center;
 }
 
-.NavBar_container
-.NavBar_content
-.NavBar_hamburger
+.navbar_container
+.navbar_content
+.navbar_hamburger
 {
     background: none;
     color: inherit;
@@ -100,7 +100,7 @@ span
     outline: none;
 }
 
-.NavBar_icon
+.navbar_icon
 {
     color: var(--color-highlight, #dadad1);
     fill: var(--color-highlight, #dadad1);
@@ -110,7 +110,7 @@ span
     height: 1.75rem
 }
 
-.Navbar_link
+.navbar_link
 {
     font-family: Inconsolata;
     font-size: x-large;
@@ -119,16 +119,16 @@ span
 }
 
 
-.NavBar_item 
+.navbar_item 
 {
     display: inline;
     list-style: none;
     padding: 0 1.125rem;
 }
 
-.NavBar_container
-.NavBar_content
-.NavBar_get
+.navbar_container
+.navbar_content
+.navbar_get
 {
     grid-area: get;
     align-self: center;
@@ -137,7 +137,7 @@ span
     padding: .875rem 1.5rem;
 }
 
-.NavBar_get
+.navbar_get
 { 
     --color: var(--color-yellow, #e9bc29);
     font-size: 20px;
@@ -152,18 +152,18 @@ span
     align-items: center;
 }
 
-.NavBar_container
-.NavBar_content 
-.NavBar_links
+.navbar_container
+.navbar_content 
+.navbar_links
 {
     grid-area: links;
     height: 100%;
     width: 100%;
 }
 
-.NavBar_container
-.NavBar_content 
-.NavBar_socials
+.navbar_container
+.navbar_content 
+.navbar_socials
 {
     grid-area: socials;
     align-items: center;
@@ -176,7 +176,7 @@ span
 
 /* #region General Content */
 
-.Content_container
+.content_container
 {
     padding: 50px 25px;
     height: 100vh;
@@ -186,14 +186,14 @@ span
     overflow: hidden;
 }
 
-.Content-Header
+.content-header
 {
     font-size: 2.5rem;
     text-align: center;
     color: var(--color-yellow);
 }
 
-.Content-Subtitle
+.content-subtitle
 {
     font-size: 1rem;
     text-align: center;
@@ -219,7 +219,7 @@ span
 
 /* #region Front */
 
-.Front_container
+.front_container
 {
     position: relative;
     height: 100vh;
@@ -230,14 +230,14 @@ span
     justify-content: center;
 }
 
-.Front_PreTitle-text
+.front_pretitle-text
 {
     font-family: Inconsolata;
     font-size: 1rem;
     text-align: center;
 }
 
-#Front_Title-text
+#front_title-text
 {
     padding: 50px;
     font-family: Inconsolata;
@@ -245,7 +245,7 @@ span
     text-align: center;
 }
 
-.Front_trailer
+.front_trailer
 {
     background: rgba(0, 0, 0, .3);
     cursor: pointer;
@@ -266,7 +266,7 @@ span
 
 /* #region News */
 
-.News_container
+.news_container
 {
     display: flex;
     justify-content: center;
@@ -276,7 +276,7 @@ span
     background-color: black;
 }
 
-.News-text
+.news-text
 {
     font-size: 1.15em;
     font-family: "Nunito Sans", sans-serif;
@@ -286,9 +286,9 @@ span
 
 /* #endregion */
 
-/* #region Feature */
+/* #region feature */
 
-.Feature_content
+.feature_content
 {
     cursor: default;
     display: flex;
@@ -299,7 +299,7 @@ span
     text-align: center;
 }
 
-.Feature_column_container
+.feature_column_container
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -307,7 +307,7 @@ span
     column-gap: 1rem;
 }
 
-.Feature_column
+.feature_column
 {
     justify-content: flex-start;
     display: flex;
@@ -318,13 +318,13 @@ span
     row-gap: 2rem;
 }
 
-.Feature-text
+.feature-text
 {
     font-size: 1.75em;
     text-align: center;
 }
 
-.Feature-image
+.feature-image
 {
   width: 250px;
   height: 250px;
@@ -334,7 +334,7 @@ span
 
 /* #region ROAD MAP */
 
-.RoadMap_content
+.roadmap_content
 {
     cursor: default;
     display: flex;
@@ -345,7 +345,7 @@ span
     text-align: center;
 }
 
-.RoadMap_column_container
+.roadmap_column_container
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -353,7 +353,7 @@ span
     column-gap: 1rem;
 }
 
-.RoadMap_column
+.roadmap_column
 {
     display: flex;
     flex-direction: column;
@@ -363,19 +363,19 @@ span
     justify-content: flex-start;
 }
 
-.RoadMap-image
+.roadmap-image
 {
     width: 200px;
     height: 200px;
 }
 
-.RoadMap-heading
+.roadmap-heading
 {
     text-align: center;
     font-size: 1.25em;
 }
 
-.RoadMap-explanation
+.roadmap-explanation
 {
     font-size: 1.1em;
     text-align: center;
@@ -383,10 +383,10 @@ span
 
 /* #endregion */
 
-/* #region Requirements */
+/* #region requirements */
 
 
-.Requirements_content
+.requirements_content
 {
     cursor: default;
     display: flex;
@@ -397,7 +397,7 @@ span
     text-align: center;
 }
 
-.Requirements-text
+.requirements-text
 {
     padding-top: 100px;
     font-size: 2.5rem;
@@ -407,13 +407,13 @@ span
 
 /* #endregion */
 
-/* #region Footer */
+/* #region footer */
 
-.Footer_container
-.Footer_content
+.footer_container
+.footer_content
 {
     display: grid;
-    grid-template-areas: "Ephemeral_icon" "Footer_link" "Footer_text";
+    grid-template-areas: "Ephemeral_icon" "footer_link" "footer_text";
     height: 100vh;
     justify-items: center;
     align-content: center;
@@ -427,22 +427,22 @@ span
 }
 
 
-.Footer_link
+.footer_link
 {
     font-family: Inconsolata;
     font-size: 1rem;
     color: var(--color-highlight);
 }
 
-.Footer_column
+.footer_column
 {
     padding-top: 100px;
-    grid-area: Footer_link;
+    grid-area: footer_link;
 }
 
-.Footer_text
+.footer_text
 {
-    grid-area: Footer_text;
+    grid-area: footer_text;
     font-size: 1rem;
     text-align: center;
     padding-top: 50px;
@@ -453,8 +453,8 @@ span
 
 @media screen and (min-width: 1200px) 
 {
-    .NavBar_container
-    .NavBar_content
+    .navbar_container
+    .navbar_content
     {
         display: grid;
         grid-template-areas: "links socials get";
@@ -465,7 +465,7 @@ span
         
     } 
 
-    .NavBar_container
+    .navbar_container
     {
         height: var(--nav-height);
         background-color: transparent;
@@ -473,34 +473,34 @@ span
         justify-items: center;
     }
 
-    .NavBar_container
-    .NavBar_content
-    .NavBar_list
+    .navbar_container
+    .navbar_content
+    .navbar_list
     {
         padding-left: 1.125rem;
         position: relative;
 
     }
 
-    .NavBar_container
-    .NavBar_content
-    .NavBar_links
+    .navbar_container
+    .navbar_content
+    .navbar_links
     {
         display: flex;
         align-items: center;
     }
 
-    .NavBar_container
-    .NavBar_content
-    .NavBar_socials
+    .navbar_container
+    .navbar_content
+    .navbar_socials
     {
         display: flex;
         padding: 0;
     }
 
-    .NavBar_container
-    .NavBar_content
-    .NavBar_hamburger
+    .navbar_container
+    .navbar_content
+    .navbar_hamburger
     {
         display: none;
     }   
@@ -521,11 +521,11 @@ span
 
 @media screen and (max-width: 1200px)
 {
-    .NavBar_links
+    .navbar_links
     {
         display: none;
     }
-    .NavBar_socials
+    .navbar_socials
     {
         display: none;
     }
@@ -533,7 +533,7 @@ span
 
 /* #region The Game*/
 
-.Game_container
+.game_container
 {
     position: relative;
     height: 100vh;
@@ -546,7 +546,7 @@ span
 
 /* #endregion */
 
-#Page_title
+#page_title
 {
     position: absolute;
     padding-top: 100px;
