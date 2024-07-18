@@ -1,0 +1,559 @@
+/* #region Default Values */
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none
+}
+
+:root 
+{
+    --color-highlight: #c6d4d4;
+    --color-shadow: #181818;
+    --color-red: #e11900;
+    --color-yellow: #e9bc29;
+    --color-green: #00a441;
+    --page-width: 100vw;
+}
+
+html
+{
+    scroll-behavior: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+div
+{
+    display: block;
+    unicode-bidi: isolate
+}
+
+body
+{
+    font-family: Inconsolata, Helvetica, Arial, Lucida, sans-serif, Nunito Sans;
+    background-color: var(--color-shadow,#181818);
+    color: var(--color-highlight, #dadad1);
+    overflow-x: hidden
+}
+
+span
+{
+    user-select: none;
+}
+
+/* #endregion */
+
+/* #region NavBar */
+
+.NavBar_container
+{
+    height: auto;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    --nav-height: 4.75rem;
+}
+
+.NavBar_container::before
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    display: block;
+    content: "";
+    z-index: -1;
+    -webkit-backdrop-filter: blur(2.4px);
+    backdrop-filter: blur(2.4px);
+    background-color: rgba(0, 0, 0, .4)
+}
+
+.NavBar_container
+.NavBar_content
+{
+    display: grid;
+    grid-template-areas: "hamburger get";
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+.NavBar_container
+.NavBar_content
+.NavBar_hamburger
+{
+    background: none;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    grid-area: hamburger;
+    height: var(--nav-height);
+    justify-self: flex-start;
+    align-self: flex-start;
+    padding: 0 1.125rem;
+    outline: none;
+}
+
+.NavBar_icon
+{
+    color: var(--color-highlight, #dadad1);
+    fill: var(--color-highlight, #dadad1);
+    cursor: pointer;
+    outline: none;
+    width: 2.5rem;
+    height: 1.75rem
+}
+
+.Navbar_link
+{
+    font-family: Inconsolata;
+    font-size: x-large;
+    text-decoration: none;
+    color: var(--color-highlight);
+}
+
+
+.NavBar_item 
+{
+    display: inline;
+    list-style: none;
+    padding: 0 1.125rem;
+}
+
+.NavBar_container
+.NavBar_content
+.NavBar_get
+{
+    grid-area: get;
+    align-self: center;
+    justify-self: end;
+    margin-right: 1.125rem;
+    padding: .875rem 1.5rem;
+}
+
+.NavBar_get
+{ 
+    --color: var(--color-yellow, #e9bc29);
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--color);
+    background: rgba(0, 0, 0, .3);
+    border: .125rem solid;
+    border-left: .5rem solid;
+    border-right: .5rem solid;
+    display: inline-flex;
+    align-items: center;
+}
+
+.NavBar_container
+.NavBar_content 
+.NavBar_links
+{
+    grid-area: links;
+    height: 100%;
+    width: 100%;
+}
+
+.NavBar_container
+.NavBar_content 
+.NavBar_socials
+{
+    grid-area: socials;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* #endregion */
+
+/* #region General Content */
+
+.Content_container
+{
+    padding: 50px 25px;
+    height: 100vh;
+    width: 100%;
+    border-bottom: .1rem solid;
+    border-color: #e11900;
+    overflow: hidden;
+}
+
+.Content-Header
+{
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--color-yellow);
+}
+
+.Content-Subtitle
+{
+    font-size: 1rem;
+    text-align: center;
+    color:aquamarine;
+}
+
+.text-heading
+{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+
+.text-explanation
+{
+    font-size: 1em;
+    text-align: center;
+    color: white;
+}
+
+/* #endregion */
+
+/* #region Front */
+
+.Front_container
+{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Front_PreTitle-text
+{
+    font-family: Inconsolata;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#Front_Title-text
+{
+    padding: 50px;
+    font-family: Inconsolata;
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+.Front_trailer
+{
+    background: rgba(0, 0, 0, .3);
+    cursor: pointer;
+    font-size: 20px;
+
+    justify-self: center;
+
+    border: .125rem solid;
+    border-left: .25rem solid;
+    border-right: .25rem solid;    
+
+    color: #c6d4d4;
+    width: 150px;
+    height: 60px;
+}
+
+/* #endregion */
+
+/* #region News */
+
+.News_container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 100%;
+    background-color: black;
+}
+
+.News-text
+{
+    font-size: 1.15em;
+    font-family: "Nunito Sans", sans-serif;
+    text-align: center;
+    color: var(--color-red);
+}
+
+/* #endregion */
+
+/* #region Feature */
+
+.Feature_content
+{
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    padding: 4rem 0;
+    row-gap: 5rem;
+    text-align: center;
+}
+
+.Feature_column_container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: none;
+    column-gap: 1rem;
+}
+
+.Feature_column
+{
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 1rem;
+    row-gap: 2rem;
+}
+
+.Feature-text
+{
+    font-size: 1.75em;
+    text-align: center;
+}
+
+.Feature-image
+{
+  width: 250px;
+  height: 250px;
+}
+
+/* #endregion */
+
+/* #region ROAD MAP */
+
+.RoadMap_content
+{
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    padding: 4rem 0;
+    row-gap: 3rem;
+    text-align: center;
+}
+
+.RoadMap_column_container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: none;
+    column-gap: 1rem;
+}
+
+.RoadMap_column
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 400px;
+    row-gap: 2rem;
+    justify-content: flex-start;
+}
+
+.RoadMap-image
+{
+    width: 200px;
+    height: 200px;
+}
+
+.RoadMap-heading
+{
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.RoadMap-explanation
+{
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* #endregion */
+
+/* #region Requirements */
+
+
+.Requirements_content
+{
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    padding: 4rem 0;
+    row-gap: 3rem;
+    text-align: center;
+}
+
+.Requirements-text
+{
+    padding-top: 100px;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--color-red);
+}
+
+/* #endregion */
+
+/* #region Footer */
+
+.Footer_container
+.Footer_content
+{
+    display: grid;
+    grid-template-areas: "Ephemeral_icon" "Footer_link" "Footer_text";
+    height: 100vh;
+    justify-items: center;
+    align-content: center;
+}
+
+.Ephemeral_icon
+{
+    width: 150px;
+    height: 150px;
+    grid-area: Ephemeral_icon;
+}
+
+
+.Footer_link
+{
+    font-family: Inconsolata;
+    font-size: 1rem;
+    color: var(--color-highlight);
+}
+
+.Footer_column
+{
+    padding-top: 100px;
+    grid-area: Footer_link;
+}
+
+.Footer_text
+{
+    grid-area: Footer_text;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+
+/* #endregion */
+
+@media screen and (min-width: 1200px) 
+{
+    .NavBar_container
+    .NavBar_content
+    {
+        display: grid;
+        grid-template-areas: "links socials get";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto auto;
+        column-gap: 1rem;
+        justify-items: center;
+        
+    } 
+
+    .NavBar_container
+    {
+        height: var(--nav-height);
+        background-color: transparent;
+        padding-top: 10px;
+        justify-items: center;
+    }
+
+    .NavBar_container
+    .NavBar_content
+    .NavBar_list
+    {
+        padding-left: 1.125rem;
+        position: relative;
+
+    }
+
+    .NavBar_container
+    .NavBar_content
+    .NavBar_links
+    {
+        display: flex;
+        align-items: center;
+    }
+
+    .NavBar_container
+    .NavBar_content
+    .NavBar_socials
+    {
+        display: flex;
+        padding: 0;
+    }
+
+    .NavBar_container
+    .NavBar_content
+    .NavBar_hamburger
+    {
+        display: none;
+    }   
+
+    :root 
+    {
+        --page-width: 1080px;
+    }
+}
+
+@media screen and (min-width: 960px) 
+{
+    :root 
+    {
+        --page-width: 900px;
+    }
+}
+
+@media screen and (max-width: 1200px)
+{
+    .NavBar_links
+    {
+        display: none;
+    }
+    .NavBar_socials
+    {
+        display: none;
+    }
+}
+
+/* #region The Game*/
+
+.Game_container
+{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+/* #endregion */
+
+#Page_title
+{
+    position: absolute;
+    padding-top: 100px;
+    padding-left: 75px;
+    align-self:flex-start;
+    text-align: left;
+    font-size: 4em;
+    text-decoration:underline;
+    text-decoration-thickness: 3px;
+}
